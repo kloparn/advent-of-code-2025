@@ -1,0 +1,50 @@
+# Advent of code 2025
+
+This advent of code is only 12 days, this should ofcourse not make it easier, but instead might make it ramp up in speed much faster.
+
+Anyway, this year im doing the boring and more picky VIM path, no auto correct, suggestion, linting, nothing.
+But as a fun twist, i am after solver a question seeing how co-pilot can make my solution much easier.
+
+## Notes from the days.
+
+### Day 1
+
+Not the hardest, but quite annoying trying to figure out the best way to write in VIM, have the basics already but copy and paste code is not my strong side in the editor.
+
+But as a plus, todays puzzle wasn't the hardest but got me quite going in the math department.
+
+Part 1 thoughts:
+ - Annoying to keep track of the 0-99 dial
+ - Took a while to land the thinking of how it should loop back around.
+
+Part 2 thoughts:
+  - Who wants to know everytime you **click** zero?
+  - My god the part 1 solution cannot handle the complexity of just checking if we pass through the number 0....
+  - I've resorted to just using a simple for loop, cannot be bothered trying to through around flags todo stuff.
+
+### Day 2
+
+Getting into the habit of using VIM and running node on the side, fun start.
+
+
+Part 1 thoughts:
+  - Okay, simple palindrome effect but not backwards, just splitting the strings in half and checking if they are the same.
+  - Got to refresh my reduce mind.
+
+Part 2 thoughts:
+  - I need to learn how to read instructions, i got most of it done by checking it with some splitting logic.
+  - WHO GAVE THE GNOME THE PEN TO WRITE INSTRUCTIONS?
+  - THe most annoying part currently is that VIM gives no marking for wrongfully written code.
+
+### Day 3
+
+While i do like some sliding window logic, this one is just a bit sadistic.
+
+
+Part 1 thoughts:
+ - Wow, todays puzzle aint that hard, sliding window it seems like, no biggie
+ - Logic not to shabby
+
+Part 2 thoughts:
+ - So how big can batteries get!? 12!?!
+ - Sliding window? More like satans butthole of windows, not sure how todo the logic nicely, maybe i can parse it better.
