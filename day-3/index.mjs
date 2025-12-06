@@ -68,19 +68,21 @@ highestPairsOfCombos.length = 0;
 
 for (const row of data) {
 	// Second part requires exactly twelve numbers, so lets take that instead directly.
-	const numArr = row.split("");
+	const numArr = row.split("").map(Number);
 
 	// but we go from left to right instead of right to left.
-	const numbers = [];
+	const twelvebatteries = numArr.slice(0, 12)
 
-	for (let i = 0; i < 12; i++) {
-		numbers.push(numArr.pop())
-	}	
+	for (let i = 0; i < twelvebatteries.length; i++) {
+		const biggerNumberExistIndex = numArr.slice(i, numArr.length - 12 - i).findIndex((num) => num > twelvebatteries[i]);
+		const haveEnoughSpaceToMove = numArr.slice(biggerNumberExistIndex).length > (12 - i);
 
-	// we reverse it to get the last numbers in order.
-	numbers.reverse()
+		
+		console.log({ haveEnoughSpaceToMove, biggerNumberValue: numArr[biggerNumberExistIndex], i, batteryValue: twelvebatteries[i]})
+	}
 
-	console.log({ numbers: numbers.join(""), row });
+	console.log({ numArr, twelvebatteries })
+
 }
 
 console.log("PART 2: ", highestPairsOfCombos.reduce((sum, curr) => sum + curr, 0));

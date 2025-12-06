@@ -36,7 +36,7 @@ Part 2 thoughts:
   - WHO GAVE THE GNOME THE PEN TO WRITE INSTRUCTIONS?
   - THe most annoying part currently is that VIM gives no marking for wrongfully written code.
 
-### Day 3
+### Day 3 (Haven't completed part 2)
 
 While i do like some sliding window logic, this one is just a bit sadistic.
 
@@ -48,3 +48,46 @@ Part 1 thoughts:
 Part 2 thoughts:
  - So how big can batteries get!? 12!?!
  - Sliding window? More like satans butthole of windows, not sure how todo the logic nicely, maybe i can parse it better.
+ - I've tried different approches, but currently i don't think i fully understand how todo this without going completely loco.
+
+
+### Day 4
+
+As a person who cannot legally drive a fork lift, i will try my best todo this without too much of an effort.
+It looks like we can just do a simple check around each point in the matrix.
+
+Part 1 Thoughts:
+ - As the puzzle says we can remove a paperroll if it does not have more than 3 adjecent rolls around it, i just did a quick function to check this.
+
+Part 2 thoughts:
+ - Now it wants us to repeat the process until we cannot more any more, simple.
+ - I added a look back to check if states are the same, if they are we break.
+
+
+### Day 5
+
+Fresh ingredients! how nice to let us check for this.
+
+Part 1 thoughts:
+ - I've going todo a simple math check, that is for a number, check each of our ranges, if they are under or over the boundry, then it is note fresh.
+ - Then ill just add them together.
+
+Part 2 thoughts:
+ - Wow talk about needing many valid fresh ingredients....
+ - Instead of having a for loop todo this (won't be possible the numbers are massive) im going to make a 'merge' function that merges ranges together if they overlapp.
+ - That seems to work, but i missed the part about Math.max it when joining ranges.
+
+### Day 6
+
+Math homework and an odd looking on that is, lines are weirdly out of possition.
+
+Instead of taking it normally and reading it normally we read the from up to down and then make the operations.
+
+Part 1 thoughts:
+ - Didn't check the part about having todo it vertical...
+ - Made that logic, now im using eval (idk cheating?) and join(operation) to calculate the massive numbers quick and easy.
+
+Part 2 thoughts:
+ - Now i have to read it **right to left**, that is ONE line at a time.
+ - Headache as apparently the SPACES had a meaning.... well had to rewrite my parse function to get the content
+ - Using the same logic, eval saves the game.
