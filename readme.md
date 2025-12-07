@@ -91,3 +91,17 @@ Part 2 thoughts:
  - Now i have to read it **right to left**, that is ONE line at a time.
  - Headache as apparently the SPACES had a meaning.... well had to rewrite my parse function to get the content
  - Using the same logic, eval saves the game.
+
+### Day 7
+
+A christmas tree that light will fall down from the top, quite nice graphicly got to say.
+
+Part 1 thoughts:
+ - It looks simple enough todo a breadth first search
+ - Ahh cannot forget the simple has visited map.
+
+Part 2 thoughts:
+ - I thought i could just add up another variable with a split twice every split, but noooo
+ - I've implemented a depth first search instead, not used to it so i don't know how to check the same "checked" spots logic.
+ - I might try and check differently according to a pascal triangle, it looks like that might be the best, or atleast the pattern that is.
+
