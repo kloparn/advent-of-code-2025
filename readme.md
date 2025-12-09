@@ -120,3 +120,18 @@ Part 2 thoughts:
  - It says "Continue connecting the closest unconnected pairs of junction boxes together until they're all in the same circuit"
  - While it does say continue till everything is connected, it also says **they are all**, which yet again, is me missing info.
  - Had to add a check that makes sure all points have been used up.
+
+### Day 9
+
+Okay, looks like a nice easy puzzle placement almost, just look for the biggest squares!
+
+Part 1 thoughts:
+ - Managed to create a very simple base * height algorithm that works.
+ - First try baby!!!
+
+Part 2 thoughts:
+ - Ahhh crap, this is a lot harder now.
+ - Unsure how todo this not gonna lie.....
+ - Im thinking i can find the outer bondry, and somehow go from there? Ahhhhhh
+ - While i do think i could probably have done this in maybe a few days, what i did was that i took a little help to get more used to calculating these kinds of issue.
+ - It's solved... but at what cost.
