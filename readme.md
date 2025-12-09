@@ -105,3 +105,18 @@ Part 2 thoughts:
  - I've implemented a depth first search instead, not used to it so i don't know how to check the same "checked" spots logic.
  - I might try and check differently according to a pascal triangle, it looks like that might be the best, or atleast the pattern that is.
 
+### Day 8
+
+Circuits, while i don't normally enjoy huge "joins" im giving it my all.
+
+Part 1 thoughts:
+ - Honestly, me reading and fully understanding an issue might be the hardest part.
+ - I've managed todo the test good, and while that works...the real data does not.
+ - Ahh, so after a bit of help, to fully understand the question, it does imply that you can join circuits that interconnect.
+
+Part 2 thoughts:
+ - So it wants us to continue until we have a big loop, that's easy
+ - WELL, it was easy doing this, BUT yet again, reading is hard.
+ - It says "Continue connecting the closest unconnected pairs of junction boxes together until they're all in the same circuit"
+ - While it does say continue till everything is connected, it also says **they are all**, which yet again, is me missing info.
+ - Had to add a check that makes sure all points have been used up.
