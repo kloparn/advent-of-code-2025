@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 
-const data = (await fs.readFile("example", "utf8")).split(/\n/).filter(String);
-// const data = (await fs.readFile("data", "utf8")).split(/\n/).filter(String);
+// const data = (await fs.readFile("example", "utf8")).split(/\n/).filter(String);
+const data = (await fs.readFile("data", "utf8")).split(/\n/).filter(String);
 
 
 // Think i want todo a sliding withdow isch approch. 
@@ -66,24 +66,45 @@ console.log("PART 1: ", highestPairsOfCombos.reduce((sum, curr) => sum + curr, 0
 // We restart the logic.
 highestPairsOfCombos.length = 0;
 
-for (const row of data) {
-	// Second part requires exactly twelve numbers, so lets take that instead directly.
-	const numArr = row.split("").map(Number);
+let sum = 0;
 
-	// but we go from left to right instead of right to left.
-	const twelvebatteries = numArr.slice(0, 12)
+for (const line of data) {
+	const nums = line.split("").map(Number);
 
-	for (let i = 0; i < twelvebatteries.length; i++) {
-		const biggerNumberExistIndex = numArr.slice(i, numArr.length - 12 - i).findIndex((num) => num > twelvebatteries[i]);
-		const haveEnoughSpaceToMove = numArr.slice(biggerNumberExistIndex).length > (12 - i);
+	// What we do, is that we grab the most right of the numbers, 
+	// This way we can just check to the left of a number if it's bigger than the one previous, cause no matter what it is.
 
+	const lastNumbers = nums.slice(nums.length - 12, nums.length).map((it, i) => [it, nums.length - ( 12 - i)]);
+	
+	for(let i = 0; i < lastNumbers.length; i++) {
+		let [num, index] = lastNumbers[i];
+		let previousIndex;
+		if (lastNumbers[i-1]) previousIndex = lastNumbers[i-1][1]
+		else previousIndex = -1;
+	
+		if (previousIndex && previousIndex + 1 === index) continue; // We cannot go more left on this slot.
 		
-		console.log({ haveEnoughSpaceToMove, biggerNumberValue: numArr[biggerNumberExistIndex], i, batteryValue: twelvebatteries[i]})
+		const slicedArr = nums.slice(0, index + previousIndex + 1).map((it, itIndex) => [it, itIndex]);
+
+		// we sort the arr so we have the biggest entry first.
+		slicedArr.sort((a,b) => b[0] - a[0])
+
+		// console.log({ lastNumbers })
+
+		// now we loop from in the arr and see if we can find a bigger entry than the one we have.
+		for (let [xnum, xindex] of slicedArr) {
+			if (xnum >= num && xindex < index && xindex > previousIndex) {
+				lastNumbers[i] = [xnum, xindex];
+				break;
+			}
+		}
+		
+		
 	}
 
-	console.log({ numArr, twelvebatteries })
+	sum += Number(lastNumbers.map((it) => it[0]).join(""))
 
 }
 
-console.log("PART 2: ", highestPairsOfCombos.reduce((sum, curr) => sum + curr, 0));
+console.log("PART 2: ", sum);
 
