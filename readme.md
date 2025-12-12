@@ -36,7 +36,7 @@ Part 2 thoughts:
   - WHO GAVE THE GNOME THE PEN TO WRITE INSTRUCTIONS?
   - THe most annoying part currently is that VIM gives no marking for wrongfully written code.
 
-### Day 3 (Haven't completed part 2)
+### Day 3 
 
 While i do like some sliding window logic, this one is just a bit sadistic.
 
@@ -48,8 +48,11 @@ Part 1 thoughts:
 Part 2 thoughts:
  - So how big can batteries get!? 12!?!
  - Sliding window? More like satans butthole of windows, not sure how todo the logic nicely, maybe i can parse it better.
- - I've tried different approches, but currently i don't think i fully understand how todo this without going completely loco.
-
+ - For some reason i read it as 8 batteries, so what i didn was that i did a bfs, this.... was not smart, too much data never was gonna complete.
+ - Instead of doing a weird search, i thought i could do a dp for a bit.
+ - But instead i did a smart solutation that goes instantly.
+ - I take the most right twelve batteries, then go from the most left battery to if i can find a bigger number to the right.
+ - If i can, i move the left pointer to that new battery, and then check again.
 
 ### Day 4
 
@@ -135,3 +138,32 @@ Part 2 thoughts:
  - Im thinking i can find the outer bondry, and somehow go from there? Ahhhhhh
  - While i do think i could probably have done this in maybe a few days, what i did was that i took a little help to get more used to calculating these kinds of issue.
  - It's solved... but at what cost.
+### Day 10
+
+Light switches with instructions and power joltage, talk about a light studio (dunst dunst dunst)
+
+Part 1 thoughts:
+ - As i have to solve it, in the least steps, it feels like i should do a depth search, or maybe a breadth first?
+ - doing a bfs search had its issues, but with some figling with the already checked points, it've completed it.
+ - Took 20 seconds to run, oh damn.
+
+Part 2 thoughts:
+ - Oke, so now they want to include the jolts, each button increases jolt counter...
+ - I guess i can throw away the lightswitches, as the jolt is the truth now.
+ - I cannot complete this with my current knowledge, i have a feeling math is needed.
+
+I've succumed to co-pilot for part 2, not fully but partly to help do the linear solution!
+
+### Day 11
+
+Oh no, i've got a feeling that an elephant stuck in a volcano issue is coming up...
+
+Part 1 Thoughts:
+ - Oke simple, breadth first search with a check that we cannot go back to already explored paths.
+ - Nice quick and easy 1-1 look up if we've been somewhere and the new paths.
+
+Part 2 thoughts:
+ - This looks like just a modified part 1... trying it but i am quite sure ill bite my own tail on this one.
+ - I was right... Ahhh, after some googling, when you have a path that has no loops and need to check possible paths, you can use something called DAG (direct acyclic graph).
+ - Oke, it looks like it's 'like' a dfs, that is you go down once to the goal, but you count the ways to possibly get there, like a plus path but also keeping track if we've seen the two keys.
+ - Anyway this was a hard day but possible if i knew directly about the DAG way of handing problems like this.
