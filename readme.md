@@ -5,6 +5,29 @@ This advent of code is only 12 days, this should ofcourse not make it easier, bu
 Anyway, this year im doing the boring and more picky VIM path, no auto correct, suggestion, linting, nothing.
 But as a fun twist, i am after solver a question seeing how co-pilot can make my solution much easier.
 
+## Overview
+As this was the first Advent of Code solved, i wanted to mark down what parts i had issues with and help on.
+
+ - Day 1: No help, about 2 hours
+ - Day 2: No help, about 3 hours
+ - Day 3: No help, on and off for about 9 days.
+ - Day 4: No help, about 2 hours
+ - Day 5: No help, about 1 hour, math really came in handy this AoC
+ - Day 6: No help, about 3 hours, again Math!
+ - Day 7: google help, about 4 hours
+ - Day 8: No help, about 3 hours
+ - Day 9: part 1 no help, part 2 however i asked co-pilot to explain and teach me about the way of checking efficiently, about 6 hours
+ - Day 10: part 1 no help, part 2 some discussion with Co-pilot and learning about Gaussian elimination, about 5 hours
+ - Day 11: part 1 no help, part 2 major back and forth on how todo this with co-pilot, learned about DAGS (Direct acyclic graph), about 4 hours
+ - Day 12: part 1 half help half not, apparently you can cheap this solution fully, but i didn't. Co-pilot teaches new things.
+
+In summary, this years AoC Was deffo shorter, but it still game me a run for my time (not money), and was a fun way this year to measure my growths as a developer.
+I've figured out that even when you are stuck on something, trying new things should not be scary, but more a positive way of learning new things.
+
+I've done AoC now for about 4 years, and everytime i am annoying as some puzzles and happy i solve stuff and angry that i can't read, but always in the end i am satsified on where i end.
+This time around i managed to complete the whole calendar, i am happy and will now know more for next time.
+
+I've also taken the time to write all of the code in VIM where i had no help with linting or otherstuff, i am just very picky so i manually do the linting part 
 ## Notes from the days.
 
 ### Day 1
@@ -167,3 +190,13 @@ Part 2 thoughts:
  - I was right... Ahhh, after some googling, when you have a path that has no loops and need to check possible paths, you can use something called DAG (direct acyclic graph).
  - Oke, it looks like it's 'like' a dfs, that is you go down once to the goal, but you count the ways to possibly get there, like a plus path but also keeping track if we've seen the two keys.
  - Anyway this was a hard day but possible if i knew directly about the DAG way of handing problems like this.
+
+### Day 12
+
+Well well, last day. Im not excited to see the mystery i have to solve...
+And i was right, fitting shapes inside a grid, now this sounds like something i am not familiar with...
+
+Part 1 thoughts:
+ - I have no idea how todo this efficiently, i've created the logic for everything before checking, but im at my limit atm.
+ - I found this article https://arxiv.org/pdf/cs/0011047, maybe the logic here can help haha
+ - I succummed yet again but learned a few things about how to solve the puzzle today, it was fun.
